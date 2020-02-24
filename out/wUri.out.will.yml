@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wUri.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wUri.out.will.yml: &ref_0
+    hash: 07b35cdf845e0b82cf0e8db4768d0b1b
+    size: 36732
+  ../.ex.will.yml: &ref_1
     hash: 17e6b30b945900f4fc3e7d71edb9558a
     size: 1636
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: 3e9ed02b9bd469d6f46477d5db587d2f
     size: 4560
 module:
@@ -16,19 +19,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      interpreters:
         - njs >= 8.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@willbe.so>
       npm.name: wuri
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -673,6 +676,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          reflector: 'reflector::exported.proto.export*'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          reflector: 'reflector::exported.files.proto.export*'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -761,8 +782,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wUri.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wUri
@@ -770,13 +792,21 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 8.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - tools
+        - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@willbe.so>
       npm.name: wuri
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1432,3 +1462,6 @@ module:
       ../.im.will.yml:
         hash: 3e9ed02b9bd469d6f46477d5db587d2f
         size: 4560
+      wUri.out.will.yml:
+        hash: 07b35cdf845e0b82cf0e8db4768d0b1b
+        size: 36732
