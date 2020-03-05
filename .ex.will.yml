@@ -3,16 +3,21 @@
 about :
 
   name : 'wUri'
-  description : '___'
-  version : '0.4.0'
+  description : 'Module that aggregates tools for managing URI(s). `wUri` leverages parsing, joining, extracting, normalizing, nativizing, resolving URI(s)... Use the module to get uniform experience from playing with URI(s) on different platforms.'
+  version : '0.3.3'
   enabled : 1
   interpreters :
   - njs >= 8.0.0
   - chrome >= 60.0.0
   - firefox >= 60.0.0
   keywords :
-  - tools
   - wTools
+  - wPath
+  - path
+  - URL
+  - URI
+  - path
+  - file
   license : MIT
   author : 'Kostiantyn Wandalen <wanalen@willbe.so>'
   contributors :
@@ -27,7 +32,7 @@ path :
   repository : git+https:///github.com/Wandalen/wUri.git
   origins :
    - git+https:///github.com/Wandalen/wUri.git
-   - npm:///wUri
+   - npm:///wuri
   bugtracker : https:///github.com/Wandalen/wUri/issues
 
 step :

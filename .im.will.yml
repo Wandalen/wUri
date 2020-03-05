@@ -5,6 +5,22 @@ submodule :
   wTools :
     path : npm:///wTools
     enabled : 0 # submodule
+  wUriBasic :
+    path : npm:///wuribasic
+    enabled : 0 # submodule
+  wWebUriBasic :
+    path : npm:///wweburibasic
+    enabled : 0 # submodule
+  wUri :
+    path : hd://.
+    enabled : 0 # submodule
+    criterion :
+      development : 1
+  wTesting :
+    path : npm:///wTesting
+    enabled : 0 # submodule
+    criterion :
+      development : 1
 
 path :
 
@@ -41,7 +57,7 @@ path :
       content : prime
 
   entry.proto.no.tests :
-    path : proto/dwtools/___
+    path : proto/dwtools/abase/l6/Include.s
     criterion :
       tests : 'no.tests'
   entry.proto.only.tests :
@@ -50,7 +66,7 @@ path :
       tests : 'only.tests'
 
   entry.out.raw.debug :
-    path : '{path::out.*=1}/source/dwtools/___'
+    path : '{path::out.*=1}/source/dwtools/abase/l6/Include.s'
     criterion :
       debug : [ debug, release ]
       raw : raw
