@@ -26,13 +26,9 @@ function routinesOfUriBasic( test )
   test.is( _.routineIs( _.uri.parse ) );
   test.is( _.routineIs( _.uri.parseAtomic ) );
   test.is( _.routineIs( _.uri.parseConsecutive ) );
-  test.is( _.routineIs( _.uri.onlyParse ) );
-  test.is( _.routineIs( _.uri.onlyParseAtomic ) );
-  test.is( _.routineIs( _.uri.onlyParseConsecutive ) );
   test.is( _.routineIs( _.uri.str ) );
   test.is( _.routineIs( _.uri.full ) );
   test.is( _.routineIs( _.uri.normalizeTolerant ) );
-  test.is( _.routineIs( _.uri.onlyNormalizeTolerant ) );
   test.is( _.routineIs( _.uri.rebase ) );
   test.is( _.routineIs( _.uri.documentGet ) );
   test.is( _.routineIs( _.uri.server ) );
