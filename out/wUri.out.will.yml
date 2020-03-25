@@ -2,36 +2,42 @@ format: outwillfile-2.0
 root:
   - wUri.out
 consistency:
-  wUri.out.will.yml: &ref_0
-    hash: 07b35cdf845e0b82cf0e8db4768d0b1b
-    size: 36732
-  ../.ex.will.yml: &ref_1
-    hash: 17e6b30b945900f4fc3e7d71edb9558a
-    size: 1636
-  ../.im.will.yml: &ref_2
-    hash: 3e9ed02b9bd469d6f46477d5db587d2f
-    size: 4560
+  ../.ex.will.yml: &ref_0
+    hash: 3e091a9db654ef6099f82b12e68a0deb
+    size: 1907
+  ../.im.will.yml: &ref_1
+    hash: 94b500aef23885b6e7272a70aefdbbbc
+    size: 4935
 module:
   wUri.out:
     about:
       name: wUri
       org: noorg
-      description: ___
+      description: >-
+        Module that aggregates tools for managing URI(s). `wUri` leverages
+        parsing, joining, extracting, normalizing, nativizing, resolving
+        URI(s)... Use the module to get uniform experience from playing with
+        URI(s) on different platforms.
       enabled: 1
-      version: 0.4.0
-      interpreters:
+      version: 0.3.3
+      interpreters: &ref_2
         - njs >= 8.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
-        - tools
+      keywords: &ref_3
         - wTools
+        - wPath
+        - path
+        - URL
+        - URI
+        - path
+        - file
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@willbe.so>
       npm.name: wuri
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -67,7 +73,7 @@ module:
       origins:
         path:
           - 'git+https:///github.com/Wandalen/wUri.git'
-          - 'npm:///wUri'
+          - 'npm:///wuri'
       bugtracker:
         path: 'https:///github.com/Wandalen/wUri/issues'
       in:
@@ -109,7 +115,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: ../proto/dwtools/___
+        path: ../proto/dwtools/abase/l6/Include.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -119,13 +125,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/abase/l6/Include.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/abase/l6/Include.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -154,13 +160,35 @@ module:
           - ../proto/dwtools
           - ../proto/dwtools/Tools.s
           - ../proto/dwtools/abase
-          - ../proto/dwtools/amid
-          - ../proto/dwtools/atop
+          - ../proto/dwtools/abase/l6
+          - ../proto/dwtools/abase/l6/Include.s
+          - ../proto/dwtools/abase/l6.test
+          - ../proto/dwtools/abase/l6.test/Uri.test.s
     submodule:
       wTools:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
+      wUriBasic:
+        path: 'npm:///wuribasic'
+        autoExporting: 0
+        enabled: 0
+      wWebUriBasic:
+        path: 'npm:///wweburibasic'
+        autoExporting: 0
+        enabled: 0
+      wUri:
+        path: 'hd://..'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
+      wTesting:
+        path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
     reflector:
       reflect.proto.debug.raw:
         src:
@@ -676,24 +704,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          reflector: 'reflector::exported.proto.export*'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          reflector: 'reflector::exported.files.proto.export*'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -770,7 +780,7 @@ module:
           - 'build::npm'
     exported:
       proto.export:
-        version: 0.4.0
+        version: 0.3.3
         recursive: 0
         withIntegrated: 2
         tar: 0
@@ -782,31 +792,26 @@ module:
           content: proto
           export: 1
     consistency:
-      wUri.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wUri
       org: noorg
-      description: ___
+      description: >-
+        Module that aggregates tools for managing URI(s). `wUri` leverages
+        parsing, joining, extracting, normalizing, nativizing, resolving
+        URI(s)... Use the module to get uniform experience from playing with
+        URI(s) on different platforms.
       enabled: 1
-      version: 0.4.0
-      interpreters:
-        - njs >= 8.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      version: 0.3.3
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
+      contributors: *ref_4
       npm.name: wuri
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -840,7 +845,7 @@ module:
       origins:
         path:
           - 'git+https:///github.com/Wandalen/wUri.git'
-          - 'npm:///wUri'
+          - 'npm:///wuri'
       bugtracker:
         path: 'https:///github.com/Wandalen/wUri/issues'
       in:
@@ -882,7 +887,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: proto/dwtools/___
+        path: proto/dwtools/abase/l6/Include.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -892,13 +897,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/abase/l6/Include.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/abase/l6/Include.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -916,6 +921,26 @@ module:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
+      wUriBasic:
+        path: 'npm:///wuribasic'
+        autoExporting: 0
+        enabled: 0
+      wWebUriBasic:
+        path: 'npm:///wweburibasic'
+        autoExporting: 0
+        enabled: 0
+      wUri:
+        path: 'hd://.'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
+      wTesting:
+        path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
     reflector:
       reflect.proto.debug.raw:
         src:
@@ -1457,9 +1482,8 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: 17e6b30b945900f4fc3e7d71edb9558a
-        size: 1636
+        hash: 3e091a9db654ef6099f82b12e68a0deb
+        size: 1907
       ../.im.will.yml:
-        hash: 3e9ed02b9bd469d6f46477d5db587d2f
-        size: 4560
-      wUri.out.will.yml: *ref_0
+        hash: 94b500aef23885b6e7272a70aefdbbbc
+        size: 4935
