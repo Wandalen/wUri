@@ -3,7 +3,7 @@ root:
   - wUri.out
 consistency:
   ../.ex.will.yml: &ref_0
-    hash: 3e091a9db654ef6099f82b12e68a0deb
+    hash: 3c125bab9d7a5fc5d2114a009484e477
     size: 1907
   ../.im.will.yml: &ref_1
     hash: 94b500aef23885b6e7272a70aefdbbbc
@@ -19,7 +19,7 @@ module:
         URI(s)... Use the module to get uniform experience from playing with
         URI(s) on different platforms.
       enabled: 1
-      version: 0.3.3
+      version: 0.4.0
       interpreters: &ref_2
         - njs >= 8.0.0
         - chrome >= 60.0.0
@@ -164,6 +164,8 @@ module:
           - ../proto/dwtools/abase/l6/Include.s
           - ../proto/dwtools/abase/l6.test
           - ../proto/dwtools/abase/l6.test/Uri.test.s
+          - ../proto/dwtools/amid
+          - ../proto/dwtools/atop
     submodule:
       wTools:
         path: 'npm:///wTools'
@@ -780,7 +782,7 @@ module:
           - 'build::npm'
     exported:
       proto.export:
-        version: 0.3.3
+        version: 0.4.0
         recursive: 0
         withIntegrated: 2
         tar: 0
@@ -804,7 +806,7 @@ module:
         URI(s)... Use the module to get uniform experience from playing with
         URI(s) on different platforms.
       enabled: 1
-      version: 0.3.3
+      version: 0.4.0
       interpreters: *ref_2
       keywords: *ref_3
       license: MIT
@@ -1482,7 +1484,7 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: 3e091a9db654ef6099f82b12e68a0deb
+        hash: 3c125bab9d7a5fc5d2114a009484e477
         size: 1907
       ../.im.will.yml:
         hash: 94b500aef23885b6e7272a70aefdbbbc
