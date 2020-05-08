@@ -36,9 +36,9 @@ module:
         - path
         - file
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@willbe.so>
+      author: Kostiantyn Wandalen <wanalen@01.school>
       contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
+        - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuri
       npm.scripts:
         test: wtest .run proto/**
@@ -842,9 +842,9 @@ module:
         - path
         - file
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@willbe.so>
+      author: Kostiantyn Wandalen <wanalen@01.school>
       contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
+        - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuri
       npm.scripts:
         test: wtest .run proto/**
