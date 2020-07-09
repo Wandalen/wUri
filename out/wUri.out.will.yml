@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wUri.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wUri.out.will.yml: &ref_0
+    hash: ab97ce5f1e73e9138fe4a68644f8184d
+    size: 38335
+  ../.ex.will.yml: &ref_1
     hash: ef8949577e0eb1860bf5db48d895cb27
     size: 1908
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: e2f28e6a4f54ec3537c5fa12c4f32fcf
     size: 4933
 module:
@@ -20,11 +23,11 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      interpreters:
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - wTools
         - wPath
         - path
@@ -34,10 +37,10 @@ module:
         - file
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuri
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -699,6 +702,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          filePath: 'reflector::exported.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          filePath: 'reflector::exported.files.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -787,8 +808,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wUri.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wUri
@@ -800,13 +822,26 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 10.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - wTools
+        - wPath
+        - path
+        - URL
+        - URI
+        - path
+        - file
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuri
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1473,3 +1508,6 @@ module:
       ../.im.will.yml:
         hash: e2f28e6a4f54ec3537c5fa12c4f32fcf
         size: 4933
+      wUri.out.will.yml:
+        hash: ab97ce5f1e73e9138fe4a68644f8184d
+        size: 38335
