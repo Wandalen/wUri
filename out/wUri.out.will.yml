@@ -1508,6 +1508,4 @@ module:
       ../.im.will.yml:
         hash: e2f28e6a4f54ec3537c5fa12c4f32fcf
         size: 4933
-      wUri.out.will.yml:
-        hash: ab97ce5f1e73e9138fe4a68644f8184d
-        size: 38335
+      wUri.out.will.yml: *ref_0
