@@ -6,6 +6,6 @@ Module that aggregates tools for managing URI(s). `wUri` leverages parsing, join
 ## Try out
 ```
 npm install
-node sample/Sample.js
+node sample/Sample.s
 ```
 
