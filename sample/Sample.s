@@ -1,7 +1,7 @@
 
 if( typeof module !== 'undefined' )
 require( 'wuri' );
-var _ = wTools;
+let _ = wTools;
 
 console.log( '= Uri' );
 var uri = "git://../repo/Tools?out=out/wTools.out.will#master"

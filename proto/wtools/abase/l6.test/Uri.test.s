@@ -13,8 +13,8 @@ if( typeof module !== 'undefined' )
   
 }
 
-var _global = _global_;
-var _ = _global_.wTools;
+let _global = _global_;
+let _ = _global_.wTools;
 
 // --
 // tests
@@ -68,7 +68,7 @@ function routinesOfWebUriBasic( test )
 // declare
 // --
 
-var Self =
+let Self =
 {
 
   name : 'Tools.base.l6.Uri',
