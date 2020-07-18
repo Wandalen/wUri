@@ -71,7 +71,7 @@ function routinesOfWebUriBasic( test )
 let Self =
 {
 
-  name : 'Tools.base.l6.Uri',
+  name : 'Tools.l6.Uri',
   silencing : 1,
 
   tests :
