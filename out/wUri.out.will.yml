@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wUri.out
 consistency:
-  wUri.out.will.yml: &ref_0
-    hash: ab97ce5f1e73e9138fe4a68644f8184d
-    size: 38335
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: ef8949577e0eb1860bf5db48d895cb27
     size: 1908
-  ../.im.will.yml: &ref_2
-    hash: e2f28e6a4f54ec3537c5fa12c4f32fcf
-    size: 4933
+  ../.im.will.yml: &ref_1
+    hash: 14d44ce81b84bbba968496bae726f503
+    size: 5041
 module:
   wUri.out:
     about:
@@ -23,11 +20,11 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - wTools
         - wPath
         - path
@@ -37,10 +34,10 @@ module:
         - file
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuri
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -191,6 +188,12 @@ module:
           development: 1
       wTesting:
         path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
+      eslint:
+        path: 'npm:///eslint#7.1.0'
         autoExporting: 0
         enabled: 0
         criterion:
@@ -702,24 +705,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -808,9 +793,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wUri.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wUri
@@ -822,26 +806,13 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - wTools
-        - wPath
-        - path
-        - URL
-        - URI
-        - path
-        - file
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wuri
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -967,6 +938,12 @@ module:
           development: 1
       wTesting:
         path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
+      eslint:
+        path: 'npm:///eslint#7.1.0'
         autoExporting: 0
         enabled: 0
         criterion:
@@ -1506,6 +1483,5 @@ module:
         hash: ef8949577e0eb1860bf5db48d895cb27
         size: 1908
       ../.im.will.yml:
-        hash: e2f28e6a4f54ec3537c5fa12c4f32fcf
-        size: 4933
-      wUri.out.will.yml: *ref_0
+        hash: 14d44ce81b84bbba968496bae726f503
+        size: 5041
