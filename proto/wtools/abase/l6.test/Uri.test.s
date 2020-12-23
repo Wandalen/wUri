@@ -1,4 +1,5 @@
-( function _Uri_test_s_() {
+( function _Uri_test_s_()
+{
 
 'use strict';
 
@@ -10,7 +11,7 @@ if( typeof module !== 'undefined' )
   _.include( 'wTesting' );
 
   require( '../../abase/l6/Include.s' );
-  
+
 }
 
 let _global = _global_;
@@ -20,7 +21,7 @@ let _ = _global_.wTools;
 // tests
 // --
 
-function routinesOfUriBasic( test ) 
+function routinesOfUriBasic( test )
 {
   test.case = 'namespace _.uri';
   test.true( _.routineIs( _.uri.parse ) );
@@ -55,7 +56,7 @@ function routinesOfUriBasic( test )
 
 //
 
-function routinesOfWebUriBasic( test ) 
+function routinesOfWebUriBasic( test )
 {
   test.case = 'namespace _.weburi';
   test.true( _.routineIs( _.weburi.isAbsolute ) );
