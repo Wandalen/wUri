@@ -8,7 +8,7 @@ Module that aggregates tools for managing URI(s). `wUri` leverages parsing, join
 git clone https://github.com/Wandalen/wUri
 cd wUri
 npm install
-node sample/Sample.s
+node sample/trivial/Sample.s
 ```
 
 ## To add to your project
