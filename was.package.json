@@ -5,11 +5,11 @@
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/wtools/abase/l6/Include.s",
-  "files" : [ "proto/wtools/abase/l6/Include.s", "proto/wtools/Tools.s" ],
+  "files" : [ "proto/wtools/abase/l6/Include.s", "proto/wtools/Tools.s", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" : { "type" : "git", "url" : "https ://github.com/Wandalen/wUri.git" },
   "bugs" : { "url" : "https ://github.com/Wandalen/wUri/issues" },
   "dependencies" : { "wTools" : "", "wuribasic" : "", "wweburibasic" : "" },
-  "devDependencies" : { "wTesting" : "", "wuri" : "file:.", "eslint" : "7.1.0" },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0" },
   "keywords" : [ "wTools", "wPath", "path", "URL", "URI", "path", "file" ]
 }
