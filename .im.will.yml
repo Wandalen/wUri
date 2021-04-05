@@ -79,8 +79,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - /pro/module/wUri/proto/wtools/abase/l6/Include.s
-    - /pro/module/wUri/proto/node_modules/wuri
+    - proto/wtools/abase/l6/Include.s
+    - proto/node_modules/wuri
 reflector:
   reflect.proto:
     inherit: predefined.*
