@@ -2,12 +2,9 @@ format: outwillfile-2.0
 root:
   - wUri.out
 consistency:
-  ../.ex.will.yml: &ref_0
-    hash: ef8949577e0eb1860bf5db48d895cb27
-    size: 1908
-  ../.im.will.yml: &ref_1
-    hash: fffca5467a5125cc057591cae23385d3
-    size: 5009
+  ../will.yml: &ref_0
+    hash: 76cd08848177f2ad4944dee431d594e7
+    size: 6688
 module:
   wUri.out:
     about:
@@ -20,24 +17,23 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords: &ref_3
+      license: MIT
+      npm.name: wuri
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: &ref_1
         - wTools
         - wPath
         - path
         - URL
         - URI
-        - path
         - file
-      license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
+      contributors: &ref_2
         - Kostiantyn Wandalen <wanalen@01.school>
-      npm.name: wuri
-      npm.scripts: &ref_5
+      interpreters: &ref_3
+        - njs >= 10.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      npm.scripts: &ref_4
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -52,15 +48,11 @@ module:
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.in:
         criterion:
           predefined: 1
@@ -179,11 +171,11 @@ module:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
-      wUriBasic:
+      wuribasic:
         path: 'npm:///wuribasic'
         autoExporting: 0
         enabled: 0
-      wWebUriBasic:
+      wweburibasic:
         path: 'npm:///wweburibasic'
         autoExporting: 0
         enabled: 0
@@ -800,8 +792,7 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      ../will.yml: *ref_0
   ../:
     about:
       name: wUri
@@ -813,26 +804,22 @@ module:
         URI(s) on different platforms.
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
       npm.name: wuri
-      npm.scripts: *ref_5
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: *ref_1
+      contributors: *ref_2
+      interpreters: *ref_3
+      npm.scripts: *ref_4
     path:
       module.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
@@ -934,11 +921,11 @@ module:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
-      wUriBasic:
+      wuribasic:
         path: 'npm:///wuribasic'
         autoExporting: 0
         enabled: 0
-      wWebUriBasic:
+      wweburibasic:
         path: 'npm:///wweburibasic'
         autoExporting: 0
         enabled: 0
@@ -1491,9 +1478,6 @@ module:
           - 'build::release'
           - 'build::npm'
     consistency:
-      ../.ex.will.yml:
-        hash: ef8949577e0eb1860bf5db48d895cb27
-        size: 1908
-      ../.im.will.yml:
-        hash: fffca5467a5125cc057591cae23385d3
-        size: 5009
+      ../will.yml:
+        hash: 76cd08848177f2ad4944dee431d594e7
+        size: 6688
