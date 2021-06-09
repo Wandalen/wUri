@@ -5,7 +5,7 @@
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/node_modules/wuri",
-  "files" : [ "proto/wtools/abase/l6/Include.s", "proto/node_modules" ],
+  "files" : [ "proto/wtools/abase/l6/Include.s", "proto/node_modules", "proto/node_modules/Tools", "proto/node_modules/wuri" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" : { "type" : "git", "url" : "https ://github.com/Wandalen/wUri.git" },
   "bugs" : { "url" : "https ://github.com/Wandalen/wUri/issues" },
