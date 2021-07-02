@@ -1,6 +1,6 @@
 {
   "name": "wuri",
-  "version": "0.3.108",
+  "version": "0.3.109",
   "description": "Module that aggregates tools for managing URI(s). `wUri` leverages parsing, joining, extracting, normalizing, nativizing, resolving URI(s)... Use the module to get uniform experience from playing with URI(s) on different platforms.",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "license": "MIT",
@@ -23,12 +23,12 @@
     "url": "https ://github.com/Wandalen/wUri/issues"
   },
   "dependencies": {
-    "wweburibasic": "gamma",
-    "wuribasic": "gamma",
-    "wTools": "gamma"
+    "wweburibasic": "stable",
+    "wuribasic": "stable",
+    "wTools": "stable"
   },
   "devDependencies": {
-    "wTesting": "gamma",
+    "wTesting": "stable",
     "eslint": "7.1.0"
   },
   "keywords": [
