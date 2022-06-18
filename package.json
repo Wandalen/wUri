@@ -1,6 +1,6 @@
 {
   "name": "wuri",
-  "version": "0.3.143",
+  "version": "0.3.144",
   "description": "Module that aggregates tools for managing URI(s). `wUri` leverages parsing, joining, extracting, normalizing, nativizing, resolving URI(s)... Use the module to get uniform experience from playing with URI(s) on different platforms.",
   "author": "Kostiantyn Wandalen <wandalen@obox.systems>",
   "license": "MIT",
